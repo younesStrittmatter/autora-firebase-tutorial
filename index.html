@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Autora Firebase Tutorial</title>
+    <style>
+        * {
+            font-family: Arial, sans-serif;
+            color: #000;
+        }
+
+        body {
+            background: #8AAAE5;
+
+        }
+        #wrapper {
+            margin: 0 10vw;
+            background: #FFF;
+            padding: 4vh 12vw;
+            padding-bottom: 24vh;
+        }
+
+        p {
+            text-align: justify;
+            line-height: 18pt;
+            font-size: 12pt;
+        }
+
+        li {
+            margin: 2vh 0;
+        }
+
+        h1 {
+        }
+
+        h2 {
+            font-size: 16pt;
+            margin-top: 3vh;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            margin-top: 4vh;
+            margin-bottom: 0;
+            font-size: 12pt;
+            text-transform: uppercase;
+        }
+        .section-wrapper {
+            border-top: 1pt solid #0002 ;
+            margin: 5vh 0;
+        }
+        code {
+            display: block;
+            padding: 8pt;
+            border: 1pt dashed white;
+            background: black;
+            color: white;
+            font-family: "Courier New", Serif;
+        }
+        .branch {
+            font-style: italic;
+        }
+        .file {
+            font-style: italic;
+        }
+        a {
+            color: #8AAAE5;
+            text-decoration: none;
+
+        }
+        a:hover {
+            color: #0A2A55;
+
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <h1>Running a full closed loop</h1>
+    <div class="section-wrapper" id="intro">
+        <h2>Introduction</h2>
+        <p>
+            We'll be running a full closed loop with autora and a super-experiment. The dependent variable will be the
+            coherence
+            (difficulty) of a task, the independent variable will be the accuracy. The documentation for the template
+            we'll
+            be using
+            to set up the experiment can be found here:
+            <a href="https://autoresearch.github.io/cra-template-autora-firebase/">cra template</a>.
+            The documentation for the experiment we'll be using, can be found here: <a
+                href="https://autoresearch.github.io/super-experiment/">super experiment</a>.
+            (You don't need to checkout the documentation before the tutorial, all will be explained then)
+        </p>
+    </div>
+    <div class="section-wrapper" id="prerequisites">
+        <h2>Prerequisites</h2>
+        <p>
+            To save some time, we can prepare some things before the tutorial starts (if you run into any issues here or
+            have questions, feel free to contact me)
+        </p>
+
+        <h3>Install node and npm</h3>
+        <p>
+            Install node and npm. A tutorial can be found here:
+            <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm">Installing Node.js and npm</a>
+        </p>
+        <h3>Prepare your autora repository</h3>
+        <p>
+            In the aurora repository:
+        <ul>
+            <li>Download this file: <a href="experiment_runner_demo.py" download>Download</a></li>
+            <li>Checkout the following branch: <span class="branch">236-feat-set-up-initial-experiment-server-and-cycle-on-firebase</span></li>
+            <li>Copy the downloaded file <span class="file">experiment_runner_demo.py</span> into the root of your repository
+            <li>You'll also need to install an additional dependency: <code>pip install firebase-admin</code></li>
+            <li>If you want to make change to the theorist/experimentalist, you can modify <span>experiment_runner_demo.py</span>
+        </ul>
+        </p>
+    </div>
+    <div class="section-wrapper" id="during"></div>
+    <h2>During the tutorial</h2>
+    <p>
+        This is a little intro of thing, we'll be doing during the tutorial to get started (no need to do anything here, all will be explained during the tutorial)
+    </p>
+    <ul>
+        <li>Create a new folder/project (for example in pycharm) or a different ide for the experiment (you can also do
+            this from
+            the terminal but an ide is recommended). This will be a different project then your autora copy.
+        </li>
+        <li>To get the template run: <code>npx create-react-app my-autora-experiment --template autora-firebase</code>
+        </li>
+        <li>In the folder there will now be a <span class="file">README.md</span> file. Follow the steps listed there.</li>
+        <li>The experiment itself will be a version of the super-experiment. Follow the steps described in the
+            documentation using the condition from autora to create the settings for the experiment and the return value
+            as observation
+        </li>
+        <li>Deploy the experiment to firebase (as described in the <span class="file">README.md</span> of the template)</li>
+        <li>In the autora repository: add the firebase-credentials from your <a
+                href="https://console.firebase.google.com/">firebase project</a> (-> project -> project settings ->
+            service accounts -> generate new private key)
+        </li>
+        <li>Run the <span class="file">experiment_runner_demo.py</span></li>
+        <li>Get the link in for the project from <a href="https://console.firebase.google.com/">firebase project</a> and
+            share it in the zoom chat
+        </li>
+        <li>Participate in the experiments of your team members to provide them with data</li>
+        <li>After running the experiment (enough data is collected) your autora runner should give you a new model for
+            your data
+        </li>
+    </ul>
+</div>
+</div>
+
+</body>
+</html>
